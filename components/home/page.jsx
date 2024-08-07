@@ -23,13 +23,13 @@ const Homepage = () => {
         </div>
         <div className="text-center md:text-left">
           <h1 className="text-3xl md:text-5xl font-bold text-yellow-500">
-            — I'M Karan Randhawa.
+            &mdash; I&apos;M Karan Randhawa.
           </h1>
           <h2 className="text-3xl md:text-4xl font-bold text-gray-500 dark:text-gray-500 pl-14">
             WEB DESIGNER
           </h2>
           <p className="mt-4 text-gray-600 dark:text-gray-400">
-            I'm a full developer focused on crafting clean & user-friendly
+            I&apos;m a full developer focused on crafting clean & user-friendly
             experiences. I am passionate about building excellent software that
             improves the lives of those around me.
           </p>
