@@ -10,6 +10,7 @@ import {
   PencilIcon,
   SunIcon,
   MoonIcon,
+  CogIcon,
 } from "@heroicons/react/outline";
 
 const Navbar = () => {
@@ -46,7 +47,7 @@ const Navbar = () => {
   };
 
   return (
-    <div className="fixed md:right-10 right-4 top-4 md:top-1/2 transform md:-translate-y-1/2 flex flex-col space-y-4 z-50">
+    <div className="fixed md:right-10 right-4 top-4 md:top-1/2 transform md:-translate-y-1/2 flex flex-col space-y-4 z-50 border border-black bg-gray-200 rounded-xl pb-2">
       <button
         onClick={toggleNavbar}
         className="p-2 bg-gray-200 dark:bg-gray-800 rounded-full focus:outline-none md:hidden"
@@ -70,6 +71,7 @@ const Navbar = () => {
         />
         <NavItem icon={<MailIcon className="h-6 w-6" />} label="CONTACT" />
         <NavItem icon={<PencilIcon className="h-6 w-6" />} label="BLOG" />
+        <NavItem icon={<CogIcon className="h-6 w-6" />} label="Setting" />
         <NavItem
           icon={
             isDarkMode ? (

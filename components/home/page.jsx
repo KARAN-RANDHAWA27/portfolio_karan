@@ -26,15 +26,20 @@ const Homepage = () => {
             &mdash; I am Karan Randhawa.
           </h1>
           <h2 className="text-3xl md:text-4xl font-bold text-gray-500 dark:text-gray-500 pl-14">
-            WEB DESIGNER
+            Full Stack Developer
           </h2>
           <p className="mt-4 text-gray-600 dark:text-gray-400">
             I am a full developer focused on crafting clean &amp; user-friendly
             experiences. I am passionate about building excellent software that
             improves the lives of those around me.
           </p>
-          <button className="mt-6 px-6 py-2 rounded-full bg-yellow-500 text-white hover:bg-yellow-600 focus:outline-none">
+          {/* <button className="mt-6 px-6 py-2 rounded-full bg-yellow-500 text-white hover:bg-yellow-600 focus:outline-none">
             MORE ABOUT ME
+          </button> */}
+          <button className="mt-6 p-[3px] relative">
+            <div className="px-8 py-2 rounded-full border border-yellow-500 relative group transition duration-200 text-black dark:text-gray-400 hover:bg-yellow-500">
+              MORE ABOUT ME
+            </div>
           </button>
         </div>
       </div>
