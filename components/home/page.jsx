@@ -8,7 +8,7 @@ const Homepage = () => {
       <Navbar />
       <div className="hidden lg:block absolute inset-0 bg-yellow-500  transform rotate-[-15deg] -translate-x-1/2 -translate-y-1/4 h-[200%] w-2/6"></div>
 
-      <div className="flex flex-col md:flex-row items-center space-y-8 md:space-y-0 md:space-x-8 relative z-10 mt-20 md:mt-0">
+      <div className="flex flex-col md:flex-row items-center space-y-8 md:space-y-0 md:space-x-8 relative z-10 mt-14 md:mt-0">
         <div className="relative">
           <div className="rounded-2xl md:rounded-xl overflow-hidden">
             <Image
