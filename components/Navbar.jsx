@@ -12,6 +12,7 @@ import {
   MoonIcon,
   CogIcon,
 } from "@heroicons/react/outline";
+import Link from "next/link";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -47,11 +48,12 @@ const Navbar = () => {
   };
 
   return (
-    <div className="fixed md:right-10 right-4 top-4 md:top-1/2 transform md:-translate-y-1/2 flex flex-col space-y-4 z-50 border border-black bg-gray-200 rounded-xl pb-2">
-      <button
-        onClick={toggleNavbar}
-        className="p-2 bg-gray-200 dark:bg-gray-800 rounded-full focus:outline-none md:hidden"
-      >
+    <div
+      className={`fixed top-0 right-0 z-50 flex flex-col space-y-4 border border-black bg-gray-200 dark:bg-slate-800 md:top-1/2 md:right-10 md:-translate-y-1/2 rounded-xl md:rounded-xl transition-all duration-300 ease-in-out ${
+        isOpen ? "w-full h-full left-0" : "w-11 h-auto right-2 top-4"
+      }`}
+    >
+      <button onClick={toggleNavbar} className="p-2 md:hidden flex justify-end">
         {isOpen ? (
           <XIcon className="h-6 w-6" />
         ) : (
@@ -63,15 +65,40 @@ const Navbar = () => {
           isOpen ? "block" : "hidden"
         } md:block`}
       >
-        <NavItem icon={<HomeIcon className="h-6 w-6" />} label="HOME" />
-        <NavItem icon={<UserIcon className="h-6 w-6" />} label="ABOUT" />
+        <NavItem
+          icon={<HomeIcon className="h-6 w-6" />}
+          label="HOME"
+          href="/"
+          isOpen={isOpen}
+        />
+        <NavItem
+          icon={<UserIcon className="h-6 w-6" />}
+          label="ABOUT"
+          href="/about"
+          isOpen={isOpen}
+        />
         <NavItem
           icon={<BriefcaseIcon className="h-6 w-6" />}
-          label="PORTFOLIO"
+          label="PROJECTS"
+          href="/projects"
+          isOpen={isOpen}
         />
-        <NavItem icon={<MailIcon className="h-6 w-6" />} label="CONTACT" />
-        <NavItem icon={<PencilIcon className="h-6 w-6" />} label="BLOG" />
-        <NavItem icon={<CogIcon className="h-6 w-6" />} label="Setting" />
+        <NavItem
+          icon={<MailIcon className="h-6 w-6" />}
+          label="CONTACT"
+          href="/contact"
+          isOpen={isOpen}
+        />
+        {/* <NavItem
+          icon={<PencilIcon className="h-6 w-6" />}
+          label="BLOG"
+          href="/blogs"
+        />
+        <NavItem
+          icon={<CogIcon className="h-6 w-6" />}
+          label="SETTING"
+          href="/settings"
+        /> */}
         <NavItem
           icon={
             isDarkMode ? (
@@ -80,26 +107,60 @@ const Navbar = () => {
               <MoonIcon className="h-6 w-6" onClick={toggleDarkMode} />
             )
           }
-          label=""
+          label={isDarkMode ? "Light Mode" : "Dark Mode"}
+          href="#"
+          isOpen={isOpen}
         />
       </div>
     </div>
   );
 };
 
-const NavItem = ({ icon, label }) => {
+const NavItem = ({ icon, label, href, isOpen }) => {
   return (
-    <div className="group relative flex items-center">
-      <div className="p-2 rounded-full bg-gray-200 dark:bg-gray-800  group-hover:bg-yellow-500">
-        {icon}
+    <Link href={href}>
+      <div className="group relative flex items-center pb-2 ml-2 md:ml-0">
+        <div className="p-2 rounded-full bg-gray-200 dark:bg-gray-800  group-hover:bg-yellow-500">
+          {icon}
+        </div>
+        {label && (
+          <span
+            className={` ${
+              isOpen
+                ? "text-black dark:text-white"
+                : "absolute right-12 ml-12 whitespace-nowrap bg-yellow-500 text-white dark:text-white px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity duration-300 transform -translate-x-full group-hover:translate-x-0"
+            }`}
+          >
+            {label}
+          </span>
+        )}
       </div>
-      {label && (
-        <span className="absolute right-12 ml-12 whitespace-nowrap bg-yellow-500 text-white dark:text-black px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity duration-300 transform -translate-x-full group-hover:translate-x-0">
-          {label}
-        </span>
-      )}
-    </div>
+    </Link>
   );
 };
 
 export default Navbar;
+
+{
+  /* <Link href={"/"} className="h-6 w-6">
+          <NavItem icon={<HomeIcon className="h-6 w-6" />} label="HOME" />
+        </Link>
+        <Link href={"/about"}>
+          <NavItem icon={<UserIcon className="h-6 w-6" />} label="ABOUT" />
+        </Link>
+        <Link href={"/portfolio"}>
+          <NavItem
+            icon={<BriefcaseIcon className="h-6 w-6" />}
+            label="PORTFOLIO"
+          />
+        </Link>
+        <Link href={"/contact"}>
+          <NavItem icon={<MailIcon className="h-6 w-6" />} label="CONTACT" />
+        </Link>
+        <Link href={"/blog"}>
+          <NavItem icon={<PencilIcon className="h-6 w-6" />} label="BLOG" />
+        </Link>
+        <Link href={"/setting"}>
+          <NavItem icon={<CogIcon className="h-6 w-6" />} label="SETTING" />
+        </Link> */
+}
