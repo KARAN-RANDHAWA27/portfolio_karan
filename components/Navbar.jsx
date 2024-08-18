@@ -70,24 +70,28 @@ const Navbar = () => {
           label="HOME"
           href="/"
           isOpen={isOpen}
+          onClick=""
         />
         <NavItem
           icon={<UserIcon className="h-6 w-6" />}
           label="ABOUT"
           href="/about"
           isOpen={isOpen}
+          onClick=""
         />
         <NavItem
           icon={<BriefcaseIcon className="h-6 w-6" />}
           label="PROJECTS"
           href="/projects"
           isOpen={isOpen}
+          onClick=""
         />
         <NavItem
           icon={<MailIcon className="h-6 w-6" />}
           label="CONTACT"
           href="/contact"
           isOpen={isOpen}
+          onClick=""
         />
         {/* <NavItem
           icon={<PencilIcon className="h-6 w-6" />}
@@ -110,16 +114,20 @@ const Navbar = () => {
           label={isDarkMode ? "Light Mode" : "Dark Mode"}
           href="#"
           isOpen={isOpen}
+          onClick={toggleDarkMode}
         />
       </div>
     </div>
   );
 };
 
-const NavItem = ({ icon, label, href, isOpen }) => {
+const NavItem = ({ icon, label, href, isOpen, onClick }) => {
   return (
     <Link href={href}>
-      <div className="group relative flex items-center pb-2 ml-2 md:ml-0">
+      <div
+        className="group relative flex items-center pb-2 ml-2 md:ml-0"
+        onClick={onClick}
+      >
         <div className="p-2 rounded-full bg-gray-200 dark:bg-gray-800  group-hover:bg-yellow-500">
           {icon}
         </div>
