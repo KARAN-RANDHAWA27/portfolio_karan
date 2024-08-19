@@ -418,7 +418,7 @@ const About = () => {
         <span className="font-semibold text-customGray text-2xl lg:text-3xl">
           EXPERIENCE &amp; EDUCATION
         </span>
-        <div className="px-6">
+        <div className="px-6 mt-10">
           <div className="max-w-6xl mx-auto antialiased pt-4 grid lg:grid-cols-2 gap-16 relative">
             {/* Experience Section */}
             <div className="relative">
