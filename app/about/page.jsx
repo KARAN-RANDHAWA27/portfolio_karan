@@ -95,7 +95,7 @@ const About = () => {
       </div>
 
       <div className="flex flex-col lg:flex-row lg:justify-center lg:items-start lg:ml-56 gap-10 ml-4">
-        <div className="flex flex-col gap-6 lg:w-1/2 ml-8">
+        <div className="flex flex-col gap-6 lg:w-1/2 ml-12">
           <span className="font-semibold text-customGray text-3xl">
             PERSONAL INFO
           </span>
@@ -122,7 +122,7 @@ const About = () => {
             </div>
           </div>
         </div>
-        <div className="flex flex-row lg:flex-col lg:w-1/2 gap-6">
+        <div className="flex flex-row lg:flex-col lg:w-1/2 gap-6 ml-2">
           <div className="flex flex-col lg:flex-row gap-10">
             <CardSpotlight className="w-40 h-40">
               <span className="text-3xl font-bold relative z-20 mt-2 text-yellow-400">
