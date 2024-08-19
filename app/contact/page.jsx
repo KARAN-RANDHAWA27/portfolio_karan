@@ -23,6 +23,7 @@ const Contact = () => {
   const [message, setMessage] = useState("");
   const [done, setDone] = useState(false);
   const [error, setError] = useState("");
+  const [submitting, setSubmitting] = useState(false);
 
   const form = useRef();
 
@@ -61,6 +62,7 @@ const Contact = () => {
       setError("Invalid email address.");
       return;
     }
+    setSubmitting(true);
     emailjs
       .sendForm(
         "service_bd6omkv",
@@ -75,9 +77,11 @@ const Contact = () => {
           setEmail("");
           setMessage("");
           setError("");
+          setSubmitting(false);
         },
         (error) => {
           console.log(error);
+          setSubmitting(false);
         }
       );
   };
@@ -136,8 +140,11 @@ const Contact = () => {
                   />
                 </LabelInputContainer>
 
-                <button className="px-8 py-2 bg-black dark:bg-slate-700 text-white text-sm rounded-md font-semibold hover:bg-black/[0.8] hover:shadow-lg">
-                  Submit
+                <button
+                  className="px-8 py-2 bg-black dark:bg-slate-700 text-white text-sm rounded-md font-semibold hover:bg-black/[0.8] hover:shadow-lg"
+                  disabled={submitting}
+                >
+                  {submitting ? "Sending..." : "Submit"}
                 </button>
               </form>
               {error && (
