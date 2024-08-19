@@ -48,12 +48,8 @@ const Navbar = () => {
   };
 
   return (
-    <div
-      className={`fixed top-0 right-0 z-50 flex flex-col space-y-4 border border-black bg-gray-200 dark:bg-slate-800 md:top-1/2 md:right-10 md:-translate-y-1/2 rounded-xl md:rounded-xl transition-all duration-300 ease-in-out ${
-        isOpen ? "w-full h-full left-0" : "w-11 h-auto right-2 top-4"
-      }`}
-    >
-      <button onClick={toggleNavbar} className="p-2 md:hidden flex justify-end">
+    <div className="fixed md:right-10 right-4 top-4 md:top-1/2 transform md:-translate-y-1/2 flex flex-col space-y-4 z-50 border border-black bg-gray-200 rounded-xl dark:bg-slate-800 pb-2">
+      <button onClick={toggleNavbar} className="p-2 md:hidden">
         {isOpen ? (
           <XIcon className="h-6 w-6" />
         ) : (
@@ -69,29 +65,21 @@ const Navbar = () => {
           icon={<HomeIcon className="h-6 w-6" />}
           label="HOME"
           href="/"
-          isOpen={isOpen}
-          onClick=""
         />
         <NavItem
           icon={<UserIcon className="h-6 w-6" />}
           label="ABOUT"
           href="/about"
-          isOpen={isOpen}
-          onClick=""
         />
         <NavItem
           icon={<BriefcaseIcon className="h-6 w-6" />}
           label="PROJECTS"
           href="/projects"
-          isOpen={isOpen}
-          onClick=""
         />
         <NavItem
           icon={<MailIcon className="h-6 w-6" />}
           label="CONTACT"
           href="/contact"
-          isOpen={isOpen}
-          onClick=""
         />
         {/* <NavItem
           icon={<PencilIcon className="h-6 w-6" />}
@@ -111,34 +99,23 @@ const Navbar = () => {
               <MoonIcon className="h-6 w-6" onClick={toggleDarkMode} />
             )
           }
-          label={isDarkMode ? "Light Mode" : "Dark Mode"}
+          label=""
           href="#"
-          isOpen={isOpen}
-          onClick={toggleDarkMode}
         />
       </div>
     </div>
   );
 };
 
-const NavItem = ({ icon, label, href, isOpen, onClick }) => {
+const NavItem = ({ icon, label, href }) => {
   return (
     <Link href={href}>
-      <div
-        className="group relative flex items-center pb-2 ml-2 md:ml-0"
-        onClick={onClick}
-      >
+      <div className="group relative flex items-center pb-2">
         <div className="p-2 rounded-full bg-gray-200 dark:bg-gray-800  group-hover:bg-yellow-500">
           {icon}
         </div>
         {label && (
-          <span
-            className={` ${
-              isOpen
-                ? "text-black dark:text-white"
-                : "absolute right-12 ml-12 whitespace-nowrap bg-yellow-500 text-white dark:text-white px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity duration-300 transform -translate-x-full group-hover:translate-x-0"
-            }`}
-          >
+          <span className="absolute right-12 ml-12 whitespace-nowrap bg-yellow-500 text-white dark:text-black px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity duration-300 transform -translate-x-full group-hover:translate-x-0">
             {label}
           </span>
         )}
