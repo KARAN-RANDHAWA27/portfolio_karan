@@ -1,10 +1,41 @@
+"use client";
 import React from "react";
 import Navbar from "../../components/Navbar";
 import Image from "next/image";
+import { FloatingDock } from "@/components/ui/floating-dock";
+import {
+  IconBrandLinkedin,
+  IconBrandGithubFilled,
+  IconBrandHackerrank,
+} from "@tabler/icons-react";
 
 const Homepage = () => {
+  const links = [
+    {
+      title: "Github",
+      icon: (
+        <IconBrandGithubFilled className="h-full w-full text-neutral-500 dark:text-neutral-300" />
+      ),
+      href: "https://github.com/KARAN-RANDHAWA27",
+    },
+
+    {
+      title: "Linkdin",
+      icon: (
+        <IconBrandLinkedin className="h-full w-full text-neutral-500 dark:text-neutral-300" />
+      ),
+      href: "#",
+    },
+    {
+      title: "HackerRank",
+      icon: (
+        <IconBrandHackerrank className="h-full w-full text-neutral-500 dark:text-neutral-300" />
+      ),
+      href: "https://www.hackerrank.com/profile/karandeeprandha1",
+    },
+  ];
   return (
-    <div className="min-h-screen flex flex-col items-center justify-center bg-white dark:bg-gray-900 text-black dark:text-white p-6 relative overflow-hidden">
+    <div className="min-h-screen flex flex-col items-center justify-center bg-white dark:bg-gray-900 text-black dark:text-white p-6 relative overflow-hidden page-slide-down">
       <Navbar />
       <div className="hidden lg:block absolute inset-0 bg-yellow-500  transform rotate-[-15deg] -translate-x-1/2 -translate-y-1/4 h-[200%] w-2/6"></div>
 
@@ -33,14 +64,16 @@ const Homepage = () => {
             experiences. I am passionate about building excellent software that
             improves the lives of those around me.
           </p>
-          {/* <button className="mt-6 px-6 py-2 rounded-full bg-yellow-500 text-white hover:bg-yellow-600 focus:outline-none">
-            MORE ABOUT ME
-          </button> */}
-          <button className="mt-6 p-[3px] relative lg:ml-14">
-            <div className="px-8 py-2 rounded-full border border-yellow-500 relative group transition duration-200 text-black dark:text-gray-400 hover:bg-yellow-500">
-              MORE ABOUT ME
-            </div>
-          </button>
+          <a href="/about">
+            <button className="mt-6 p-[3px] relative lg:ml-14">
+              <div className="px-8 py-2 rounded-full border border-yellow-500 relative group transition duration-200 text-black dark:text-gray-400 hover:bg-yellow-500">
+                MORE ABOUT ME
+              </div>
+            </button>
+          </a>
+          <div className="lg:ml-10 mt-4">
+            <FloatingDock items={links} />
+          </div>
         </div>
       </div>
     </div>

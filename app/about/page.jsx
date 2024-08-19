@@ -4,8 +4,8 @@ import React, { useEffect } from "react";
 import { DownloadIcon } from "@heroicons/react/outline";
 import { CardSpotlight } from "@/components/ui/card-spotlight";
 import CircularProgress from "@mui/material/CircularProgress";
-import { TracingBeam } from "@/components/ui/tracing-beam";
 import { FaBriefcase, FaGraduationCap } from "react-icons/fa";
+
 const About = () => {
   const experienceContent = [
     {
@@ -17,7 +17,7 @@ const About = () => {
       ),
       role: "Software Developer",
       description:
-        "Developed web applications and contributed to backend development using Python and Django.",
+        "Developed web applications and contributed to backend development using Python and Django. Build chat system and all its features for a project.",
       icon: <FaBriefcase />,
     },
     {
@@ -29,7 +29,7 @@ const About = () => {
       ),
       role: "Freelancer",
       description:
-        "Worked on various freelancing projects focusing on frontend development with React and Tailwind CSS.",
+        "Worked on various freelancing projects focusing on frontend development with React and Next alongside Tailwind CSS for desgign. Django and Node for backend development.",
       icon: <FaBriefcase />,
     },
     {
@@ -41,7 +41,7 @@ const About = () => {
       ),
       role: "Junior Software Developer",
       description:
-        "Assisted in developing and maintaining software solutions, focusing on JavaScript and Node.js.",
+        "Developed web applications using HTML5, CSS3, JavaScript, React JS, Django, MUI and Tailwind. Acquired and applied new technologies through hands-on integration in various projects.",
       icon: <FaBriefcase />,
     },
     {
@@ -53,7 +53,7 @@ const About = () => {
       ),
       role: "Python and Data Science Trainer",
       description:
-        "Provided training in Python programming and data science to aspiring developers.",
+        "Provided training in Python programming and data science to aspiring developers. Build projects that includes features of Machine Learning.",
       icon: <FaBriefcase />,
     },
   ];
@@ -83,7 +83,7 @@ const About = () => {
   ];
 
   return (
-    <div>
+    <div className="page-slide-down">
       <Navbar />
       <div className="flex flex-row gap-2 justify-center mt-20 font-extrabold border border-gray-700 m-4 p-4 bg-gray-700 lg:border-none lg:bg-transparent">
         <span className="text-customGray text-3xl lg:text-5xl font-extrabold">
