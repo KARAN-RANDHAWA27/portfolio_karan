@@ -99,15 +99,15 @@ const Contact = () => {
           </span>
         </div>
         <Spotlight
-          className="-top-40 left-0 md:left-60 md:-top-20"
+          className="-top-40 left-0 lg:left-60 lg:-top-20"
           fill="white"
         />
         <div className="p-4 max-w-7xl mx-auto relative z-10 w-full pt-10 flex flex-col items-center justify-center">
           <BackgroundGradient
-            containerClassName="md:w-1/2 w-4/5"
+            containerClassName="lg:w-1/2 w-full"
             className="rounded-[22px] p-4 bg-gray-200 dark:bg-zinc-900"
           >
-            <div className="max-w-md w-full mx-auto rounded-none md:rounded-2xl p-4 md:p-8 shadow-lg bg-white dark:bg-black">
+            <div className="max-w-md w-full mx-auto rounded-none lg:rounded-2xl p-4 lg:p-8 shadow-lg bg-white dark:bg-black">
               <form className="my-8" onSubmit={handleSubmit} ref={form}>
                 <LabelInputContainer className="mb-8">
                   <Label htmlFor="name">Name</Label>

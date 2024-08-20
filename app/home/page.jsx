@@ -41,11 +41,11 @@ const Homepage = () => {
 
       <div className="flex flex-col lg:flex-row items-center space-y-8 lg:space-y-0 lg:space-x-8 relative z-10 mt-14 lg:mt-0">
         <div className="relative">
-          <div className="rounded-2xl lg:rounded-xl overflow-hidden">
+          <div className="rounded-2xl lg:rounded-xl overflow-hidden bg-transparent">
             <Image
-              src="/assets/profile.jpg"
+              src="/assets/img.jpg"
               alt="Profile Image"
-              width={500}
+              width={600}
               height={400}
               className="object-cover rounded-2xl lg:rounded-xl"
             />
