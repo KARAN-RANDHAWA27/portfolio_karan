@@ -24,6 +24,9 @@ module.exports = {
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
         customGray: '#666666',
+        gold: '#FFD700',
+        purple:'#5800FF',
+        customColor: '#F4CE14',
         primary: {
           DEFAULT: "hsl(var(--primary))",
           foreground: "hsl(var(--primary-foreground))",

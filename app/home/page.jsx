@@ -24,7 +24,7 @@ const Homepage = () => {
       icon: (
         <IconBrandLinkedin className="h-full w-full text-neutral-500 dark:text-neutral-300" />
       ),
-      href: "#",
+      href: "https://www.linkedin.com/in/karan-randhawa-743932182/",
     },
     {
       title: "HackerRank",
@@ -37,23 +37,23 @@ const Homepage = () => {
   return (
     <div className="min-h-screen flex flex-col items-center justify-center bg-white dark:bg-gray-900 text-black dark:text-white p-6 relative overflow-hidden page-slide-down">
       <Navbar />
-      <div className="hidden lg:block absolute inset-0 bg-yellow-500  transform rotate-[-15deg] -translate-x-1/2 -translate-y-1/4 h-[200%] w-2/6"></div>
+      <div className="hidden lg:block absolute inset-0 bg-gold  transform rotate-[-15deg] -translate-x-1/2 -translate-y-1/4 h-[200%] w-2/6"></div>
 
       <div className="flex flex-col lg:flex-row items-center space-y-8 lg:space-y-0 lg:space-x-8 relative z-10 mt-14 lg:mt-0">
         <div className="relative">
           <div className="rounded-2xl lg:rounded-xl overflow-hidden bg-transparent">
             <Image
-              src="/assets/img.jpg"
+              src="/assets/Karan.png"
               alt="Profile Image"
               width={600}
-              height={400}
+              height={200}
               className="object-cover rounded-2xl lg:rounded-xl"
             />
           </div>
           {/* <div className="absolute top-0 left-0 right-0 bottom-0 rounded-full lg:rounded-none border-4 border-yellow-500"></div> */}
         </div>
         <div className="text-center lg:text-left">
-          <h1 className="text-3xl lg:text-5xl font-bold text-yellow-500">
+          <h1 className="text-3xl lg:text-5xl font-bold text-gold">
             &mdash; I am Karan Randhawa.
           </h1>
           <h2 className="text-3xl lg:text-4xl font-bold text-gray-500 dark:text-gray-500 lg:pl-14">

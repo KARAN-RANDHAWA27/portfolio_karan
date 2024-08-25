@@ -89,7 +89,7 @@ const About = () => {
         <span className="text-customGray text-3xl lg:text-5xl font-extrabold">
           ABOUT
         </span>
-        <span className="text-yellow-400 text-3xl lg:text-5xl font-extrabold">
+        <span className="text-customColor text-3xl lg:text-5xl font-extrabold">
           ME
         </span>
       </div>
@@ -204,7 +204,7 @@ const About = () => {
                 size={100}
                 thickness={4}
                 sx={{
-                  color: "yellow",
+                  color: "#F4CE14",
                 }}
               />
               <div className="absolute flex items-center justify-center inset-0 text-lg font-semibold">
@@ -232,7 +232,7 @@ const About = () => {
                 size={100}
                 thickness={4}
                 sx={{
-                  color: "yellow",
+                  color: "#F4CE14",
                 }}
               />
               <div className="absolute flex items-center justify-center inset-0 text-lg font-semibold">
@@ -261,7 +261,7 @@ const About = () => {
                 size={100}
                 thickness={4}
                 sx={{
-                  color: "yellow",
+                  color: "#F4CE14",
                 }}
               />
               <div className="absolute flex items-center justify-center inset-0 text-lg font-semibold">
@@ -288,7 +288,7 @@ const About = () => {
                 size={100}
                 thickness={4}
                 sx={{
-                  color: "yellow",
+                  color: "#F4CE14",
                 }}
               />
               <div className="absolute flex items-center justify-center inset-0 text-lg font-semibold">
@@ -319,7 +319,7 @@ const About = () => {
                 size={100}
                 thickness={4}
                 sx={{
-                  color: "yellow",
+                  color: "#F4CE14",
                 }}
               />
               <div className="absolute flex items-center justify-center inset-0 text-lg font-semibold">
@@ -346,7 +346,7 @@ const About = () => {
                 size={100}
                 thickness={4}
                 sx={{
-                  color: "yellow",
+                  color: "#F4CE14",
                 }}
               />
               <div className="absolute flex items-center justify-center inset-0 text-lg font-semibold">
@@ -375,7 +375,7 @@ const About = () => {
                 size={100}
                 thickness={4}
                 sx={{
-                  color: "yellow",
+                  color: "#F4CE14",
                 }}
               />
               <div className="absolute flex items-center justify-center inset-0 text-lg font-semibold">
@@ -402,7 +402,7 @@ const About = () => {
                 size={100}
                 thickness={4}
                 sx={{
-                  color: "yellow",
+                  color: "#F4CE14",
                 }}
               />
               <div className="absolute flex items-center justify-center inset-0 text-lg font-semibold">
