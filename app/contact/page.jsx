@@ -63,6 +63,7 @@ const Contact = () => {
       return;
     }
     setSubmitting(true);
+    console.log(form.current);
     emailjs
       .sendForm(
         "service_bd6omkv",
@@ -113,6 +114,7 @@ const Contact = () => {
                   <Label htmlFor="name">Name</Label>
                   <Input
                     id="name"
+                    name="Name"
                     placeholder="Tyler"
                     type="text"
                     onInput={handleNameChange}
@@ -123,6 +125,7 @@ const Contact = () => {
                   <Label htmlFor="email">Email Address</Label>
                   <Input
                     id="email"
+                    name="Email"
                     placeholder="projectmayhem@fc.com"
                     type="email"
                     onInput={handleEmailChange}
@@ -133,6 +136,7 @@ const Contact = () => {
                   <Label htmlFor="email">Message</Label>
                   <Input
                     id="message"
+                    name="Message"
                     placeholder="What do you want to talk about?"
                     type="text"
                     onInput={handleMessageChange}
