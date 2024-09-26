@@ -167,7 +167,7 @@ const About = () => {
       </div>
 
       <div className="ml-16 lg:ml-20 mt-6">
-        <a href="/assets/cv.pdf" download="Karan_Randhawa.pdf">
+        <a href="/assets/karan_cv.pdf" download="Karan_Randhawa.pdf">
           <button className="p-[3px] relative lg:ml-44">
             <div className="px-8 py-2 rounded-full border border-yellow-500 group transition duration-200 text-black dark:text-white hover:bg-yellow-500 flex items-center justify-center gap-2">
               <span>DOWNLOAD CV</span>
