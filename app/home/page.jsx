@@ -60,7 +60,7 @@ const Homepage = () => {
             Full Stack Developer
           </h2>
           <p className="mt-4 text-gray-600 dark:text-gray-400 border border-gray-500 lg:ml-14 w-400 rounded-lg p-4 lg:w-6/12 ml-2">
-            I am a full developer focused on crafting clean &amp; user-friendly
+            I am a full stack developer focused on crafting clean &amp; user-friendly
             experiences. I am passionate about building excellent software that
             improves the lives of those around me.
           </p>
